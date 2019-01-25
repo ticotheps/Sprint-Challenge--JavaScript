@@ -97,7 +97,7 @@ for (let i = 0; i < graduates.length; i++) {
 
   nameEmailContainer.push(graduates[i]["first_name"] + " " + graduates[i].email);
 
-  contactInfo.push(nameEmailContainer);
+  contactInfo.push(nameEmailContainer.toString());
 }
 
 console.log(contactInfo);
@@ -105,6 +105,20 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (let i = 0; i < graduates.length; i++) {
+  const testForUni = "Uni";
+  let schoolName = "";
+
+  schoolName = graduates[i].university;
+
+  if (schoolName.includes(testForUni) === true) {
+    uni.push(graduates[i].university);
+  } else {
+    continue;
+  }
+}
+
 console.log(uni);
 
 
