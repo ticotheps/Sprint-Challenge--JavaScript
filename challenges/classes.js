@@ -38,12 +38,12 @@ const cuboid = new CuboidMaker({
     height: 5
 });
 
+//===================STRETCH TASK================================
 const cube = new CubeMaker({
     sideLength: 4
 });
   
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
