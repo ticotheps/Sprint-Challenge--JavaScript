@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    The biggest difference between the '.forEach()' and the '.map()' array methods is that the '.forEach()' method IS allowed to mutate the original
+    array (with the provided function, one time, on each item of this array), whereas the '.map()' method IS NOT permitted to mutate the original array. INSTEAD, the '.map()' method creates a NEW array that contains the results of the called function that was applied to each item in the array. Also,
+    the '.forEach()' method does NOT return anything, while the '.map()' method does return something (the new array with new values).
+
 2. What is the difference between a function and a method?
+
+    The difference between a 'function' and a 'method' is that functions are usually declared within 'the global scope' and is not required to be part of
+    an object (it can stand alone, independent of other objects), whereas a 'method' is essentially a more permanent, built-in function of an object's prototype. 
 
 3. What is closure?
 
+    "Closure" can be technically defined as 'the combination of, a function and the lexical environment within which it was declared.' However, I like to
+    think of the concept of "closure" as the ability of a function to have access to variables outside of it's own local scope, only if it has already FIRST attempted to define that variable inside of its own IMMEDIATE local scope.
+
 4. Describe the four rules of the 'this' keyword.
 
+    The four rules of the 'this' keyword are: Window binding, Implicit binding, Explicit binding, and New binding. Window binding refers to a default process whereby the compiler will place the context of the 'this' keyword on the 'window' of the program, which is the highest descendant on the "family tree" of objects. Implicit binding refers to the automatic binding of the 'this' keyword to the object to the DIRECT left of the "dot" used in the invocation of an object's method. Explicit binding refers to the MANUAL binding of the 'this' keyword (by the us, the developers) on specified objects, using the '.call()' method, the '.apply()' method, or the '.bind()' method. New binding refers to the binding of the 'this' keyword to a constructor function. 
+    
+
 5. Why do we need super() in an extended class?
+
+    Use of the 'super()' keyword and the 'extends' keyword allows us to abstract away the need for the ".call()" method and the "Object.create()" method because that single 'super()' keyword is enough to give us complete access to all of the properties and methods of a parent class. Without this keyword, the compiler doesn't understand WHERE to place context for the properties of the associated subclass.
 
 ## Project Set up
 
